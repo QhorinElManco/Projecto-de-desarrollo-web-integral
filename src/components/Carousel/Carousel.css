@@ -1,0 +1,9 @@
+.carousel__root {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}

@@ -1,0 +1,26 @@
+
+.product-detail__size-options {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.product-detail__size-option {
+    padding: 8px 16px;
+    border: 1px solid #e5e5e5;
+    background-color: white;
+    border-radius: var(--border-radius-default);
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.product-detail__size-option:hover {
+    border-color: var(--color-primary);
+}
+
+.product-detail__size-option--selected {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
