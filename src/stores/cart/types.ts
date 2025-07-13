@@ -1,4 +1,4 @@
-import type {ICartProduct, IShippingAddress} from "@/types/cart.ts";
+import type {ICartProduct, IShippingAddress} from "../../types/cart.ts";
 
 export interface CartStore {
     addProductToCart: (product: ICartProduct) => void;

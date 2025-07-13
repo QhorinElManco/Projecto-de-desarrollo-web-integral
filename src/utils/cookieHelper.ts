@@ -1,5 +1,5 @@
 import Cookies from "js-cookie";
-import type {IShippingAddress} from "@/types/cart.ts";
+import type { IShippingAddress } from "../types/cart";
 
 const getCookieValue = (cookieName: string): string => {
     const value = Cookies.get(cookieName);
