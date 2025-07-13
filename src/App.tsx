@@ -6,6 +6,8 @@ import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
 import {HomePage} from "./pages/Home/HomePage.tsx";
 import {ProductDetailPage} from "@/pages/ProductDetail/ProductDetailPage.tsx";
 import {CartPage} from "@/pages/Cart/CartPage.tsx";
+import {ToastContainer} from "react-toastify";
+import {CheckoutAddressPage} from "@/pages/Checkout/Adress/CheckoutAddressPage.tsx";
 
 const queryClient = new QueryClient()
 
@@ -14,6 +16,7 @@ function App() {
     return (
         <QueryClientProvider client={queryClient}>
             <ReactQueryDevtools initialIsOpen={false}/>
+            <ToastContainer/>
             <BrowserRouter>
                 <div className="app">
                     <Header/>
@@ -22,7 +25,7 @@ function App() {
                             <Route path="/" element={<HomePage/>}/>
                             <Route path="/product/:id" element={<ProductDetailPage/>}/>
                             <Route path="/cart" element={<CartPage/>}/>
-                            {/*<Route path="/checkout" element={<Checkout/>}/>*/}
+                            <Route path="/checkout/address" element={<CheckoutAddressPage/>}/>
                         </Routes>
                     </main>
                 </div>

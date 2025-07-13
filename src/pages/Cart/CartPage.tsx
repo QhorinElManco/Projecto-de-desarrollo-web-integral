@@ -87,7 +87,7 @@ export const CartPage: React.FC = () => {
                                 <span>${total}</span>
                             </div>
 
-                            <Link to="/checkout" className="cart__checkout-btn">
+                            <Link to="/checkout/address" className="cart__checkout-btn">
                                 Checkout
                             </Link>
                         </div>
