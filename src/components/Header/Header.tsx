@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import "./Header.css"
-import {useCartStore} from "@/stores/cart";
+import {useCartStore} from "../../stores/cart";
 
 export const Header = () => {
     const numberOfItems = useCartStore(state => state.numberOfItems)

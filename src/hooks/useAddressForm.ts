@@ -1,9 +1,9 @@
 import {useNavigate} from "react-router-dom";
-import {useCartStore} from "@/stores/cart";
-import type {IShippingAddress} from "@/types/cart";
 import {hasLength, useForm} from "@mantine/form";
-import {cookieHelper} from "@utils/cookieHelper.ts";
 import {toast} from "react-toastify";
+import {useCartStore} from "../stores/cart";
+import type {IShippingAddress} from "../types/cart.ts";
+import {cookieHelper} from "../utils/cookieHelper.ts";
 
 export const useAddressForm = () => {
     const navigate = useNavigate();

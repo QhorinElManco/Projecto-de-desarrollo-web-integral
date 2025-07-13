@@ -2,11 +2,11 @@ import React from "react"
 import {useParams} from "react-router-dom"
 import {useQuery} from "@tanstack/react-query"
 import "./ProductDetailPage.css"
-import {fetchProductById} from "@/data.ts";
-import {SizeSelector} from "@components/SizeSelector/SizeSelector.tsx";
-import {Carousel} from "@components/Carousel/Carousel.tsx";
-import {ItemCounter} from "@components/ItemCounter/ItemCounter.tsx";
-import {useProductDetails} from "@hooks/useProductDetails.ts";
+import {useProductDetails} from "../../hooks/useProductDetails.ts";
+import {fetchProductById} from "../../data.ts";
+import {Carousel} from "../../components/Carousel/Carousel.tsx";
+import {SizeSelector} from "../../components/SizeSelector/SizeSelector.tsx";
+import {ItemCounter} from "../../components/ItemCounter/ItemCounter.tsx";
 
 export const ProductDetailPage: React.FC = () => {
     const {id} = useParams<{ id: string }>()

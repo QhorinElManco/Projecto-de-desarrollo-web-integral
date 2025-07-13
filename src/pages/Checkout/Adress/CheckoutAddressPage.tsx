@@ -1,5 +1,5 @@
-import {useAddressForm} from "@hooks/useAddressForm.ts";
 import "./CheckoutAddressPage.css";
+import {useAddressForm} from "../../../hooks/useAddressForm.ts";
 
 export const CheckoutAddressPage = () => {
     const {handleSubmit, handleError, form} = useAddressForm();

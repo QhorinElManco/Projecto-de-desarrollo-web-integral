@@ -1,5 +1,5 @@
-import type {IProduct, IProductSize} from "@/types/IProduct.ts";
-import type {IShippingAddress} from "@/types/cart.ts";
+import type {IProduct, IProductSize} from "./IProduct.ts";
+import type {IShippingAddress} from "./cart.ts";
 
 export type IOrderItem = Pick<IProduct, 'id' | 'title' | 'slug' | 'price'> & {
     image: string;

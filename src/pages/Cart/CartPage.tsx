@@ -1,13 +1,11 @@
 import type React from "react"
 import {Link} from "react-router-dom"
 import "./CartPage.css"
-import {useCartStore} from "@/stores/cart";
-import {ItemCounter} from "@components/ItemCounter/ItemCounter.tsx";
+import {useCartStore} from "../../stores/cart";
+import {ItemCounter} from "../../components/ItemCounter/ItemCounter.tsx";
 
 export const CartPage: React.FC = () => {
-    // const {items, updateQuantity, removeItem, getTotalPrice} = useCartStore()
     const {numberOfItems, updateProductQuantity, deleteProductFromCart, total, cart, subtotal, tax} = useCartStore()
-
 
     if (numberOfItems === 0) {
         return (

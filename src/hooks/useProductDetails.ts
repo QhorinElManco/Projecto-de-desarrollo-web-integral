@@ -1,10 +1,10 @@
 import {useState, useEffect} from 'react'
 import {useQuery} from "@tanstack/react-query"
-import {fetchProductById} from "@/data"
-import {useCartStore} from "@/stores/cart"
-import type {ICartProduct} from "@/types/cart"
-import type {IProductSize} from "@/types/IProduct"
 import {useNavigate} from "react-router-dom";
+import {useCartStore} from "../stores/cart";
+import type {ICartProduct} from "../types/cart.ts";
+import {fetchProductById} from "../data.ts";
+import type {IProductSize} from "../types/IProduct.ts";
 
 export const useProductDetails = (id: string | undefined) => {
     const navigate = useNavigate();

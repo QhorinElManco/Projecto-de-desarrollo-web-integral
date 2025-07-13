@@ -1,10 +1,7 @@
 import type {FC} from "react";
 import {Swiper, SwiperSlide} from "swiper/react";
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import {EffectCoverflow, Pagination} from 'swiper/modules';
 
-import 'swiper/swiper.min.css'
-import 'swiper/modules/effect-coverflow/effect-coverflow.min.css'
-import 'swiper/modules/pagination/pagination.min.css'
 import './Carousel.css';
 
 interface CarouselProps {

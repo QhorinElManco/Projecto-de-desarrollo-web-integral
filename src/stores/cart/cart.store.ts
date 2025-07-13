@@ -1,10 +1,9 @@
-import type {ICartProduct, IShippingAddress} from "@/types/cart.ts";
 import {create} from "zustand/react";
 import Cookies from 'js-cookie'
-import {InvalidShippingAddress} from "@utils/errors.ts";
-import {cookieHelper} from "@utils/cookieHelper.ts";
-import type {CartStore, IGetter, ISetter} from "@/stores/cart/types.ts";
-
+import type {CartStore, IGetter, ISetter} from "./types";
+import type {ICartProduct, IShippingAddress} from "../../types/cart.ts";
+import {InvalidShippingAddress} from "../../utils/errors.ts";
+import {cookieHelper} from "../../utils/cookieHelper.ts";
 
 export const useCartStore = create<CartStore>()((set, get) => ({
     addProductToCart: addProductToCart(get, set),
@@ -30,17 +29,6 @@ if (typeof window !== 'undefined') {
     useCartStore.getState().loadCart();
     useCartStore.getState().loadShippingAddress();
 }
-
-// if (typeof window !== 'undefined') {
-//     const cartFromCookies = Cookies.get('cart');
-//     if (cartFromCookies) {
-//         useCartStore.setState({
-//             cart: JSON.parse(cartFromCookies as string),
-//             isLoaded: true
-//         });
-//     }
-// }
-
 
 function addProductToCart(get: IGetter, set: ISetter) {
     return (product: ICartProduct) => {

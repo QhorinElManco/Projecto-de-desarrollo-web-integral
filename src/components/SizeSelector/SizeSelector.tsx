@@ -1,8 +1,6 @@
-import {type IProductSize} from "@/types/IProduct.ts";
 import type {FC} from "react";
-import {isValidProductSize} from "@utils/typeValidations.ts";
-import {ValidationError} from "@utils/errors.ts";
 import "./SizeSelector.css";
+import type {IProductSize} from "../../types/IProduct.ts";
 
 interface Props {
     selectedSize?: IProductSize;
@@ -15,10 +13,7 @@ export const SizeSelector: FC<Props> = ({
                                             sizes,
                                             onSelectedSize,
                                         }) => {
-    const onChange = (value: string) => {
-        if (!isValidProductSize(value)) {
-            throw new ValidationError(`Invalid size: ${value}`);
-        }
+    const onChange = (value: IProductSize) => {
         onSelectedSize(value);
     };
 

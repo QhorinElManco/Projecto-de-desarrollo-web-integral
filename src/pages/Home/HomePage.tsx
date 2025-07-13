@@ -1,8 +1,8 @@
 import type React from "react"
 import {useQuery} from "@tanstack/react-query"
-import {ProductCard} from "@components/ProductCard/ProductCard.tsx"
+import {ProductCard} from "../../components/ProductCard/ProductCard.tsx";
+import {fetchProducts} from "../../data.ts";
 import "./HomePage.css"
-import {fetchProducts} from "@/data.ts";
 
 export const HomePage: React.FC = () => {
     const {
