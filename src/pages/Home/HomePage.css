@@ -1,6 +1,5 @@
 .home {
     padding: 24px;
-    /*min-height: calc(100vh - var(--header-height));*/
     background-color: #f8f9fa;
 }
 
@@ -14,12 +13,6 @@
     font-weight: 600;
     margin: 0 0 24px 0;
     color: #333;
-}
-
-.home__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 24px;
 }
 
 .home__loading,

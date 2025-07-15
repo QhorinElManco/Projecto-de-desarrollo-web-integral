@@ -1,8 +1,8 @@
 import type React from "react"
 import {useQuery} from "@tanstack/react-query"
-import {ProductCard} from "../../components/ProductCard/ProductCard.tsx";
-import {fetchProducts} from "../../data.ts";
 import "./HomePage.css"
+import {ProductList} from "../../components/products/product-list/ProductList.tsx";
+import {fetchProducts} from "../../services/productService.ts";
 
 export const HomePage: React.FC = () => {
     const {
@@ -21,11 +21,7 @@ export const HomePage: React.FC = () => {
         <div className="home">
             <div className="home__container">
                 <h1 className="home__title">All products</h1>
-                <div className="home__grid">
-                    {data?.map((product) => (
-                        <ProductCard key={product.id} product={product}/>
-                    ))}
-                </div>
+                <ProductList products={data || []}/>
             </div>
         </div>
     )

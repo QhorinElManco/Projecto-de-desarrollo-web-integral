@@ -3,11 +3,12 @@ import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
 import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
 import {ToastContainer} from "react-toastify";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {Header} from "./components/Header/Header.tsx";
+import {Header} from "./components/UI/header/Header.tsx";
 import {HomePage} from "./pages/Home/HomePage.tsx";
 import {ProductDetailPage} from "./pages/ProductDetail/ProductDetailPage.tsx";
 import {CartPage} from "./pages/Cart/CartPage.tsx";
 import {CheckoutAddressPage} from "./pages/Checkout/Adress/CheckoutAddressPage.tsx";
+import {SearchResultPage} from "./pages/Search/SearchResultPage.tsx";
 
 const queryClient = new QueryClient()
 
@@ -26,6 +27,7 @@ function App() {
                             <Route path="/product/:id" element={<ProductDetailPage/>}/>
                             <Route path="/cart" element={<CartPage/>}/>
                             <Route path="/checkout/address" element={<CheckoutAddressPage/>}/>
+                            <Route path="/search" element={<SearchResultPage/>}/>
                         </Routes>
                     </main>
                 </div>

@@ -1,6 +1,6 @@
 import type {FC} from "react";
 import "./SizeSelector.css";
-import type {IProductSize} from "../../types/IProduct.ts";
+import type {IProductSize} from "../../../types/IProduct.ts";
 
 interface Props {
     selectedSize?: IProductSize;
