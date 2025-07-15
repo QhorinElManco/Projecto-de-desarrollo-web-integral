@@ -1,7 +1,7 @@
 import React, {useMemo, useState} from "react"
 import {Link} from "react-router-dom"
 import "./ProductCard.css"
-import type {IProduct} from "../../types/IProduct.ts";
+import type {IProduct} from "../../../types/IProduct.ts";
 
 interface ProductCardProps {
     product: IProduct
