@@ -2,8 +2,8 @@ import {Link, useNavigate} from "react-router-dom";
 import "./Header.css"
 import {useCartStore} from "../../../stores/cart";
 import {type ChangeEvent, type FormEvent, type KeyboardEvent, useState} from "react";
-import {useSearchStore} from "../../../stores/search/search.store.ts";
-import {IconSearch} from "@tabler/icons-react";
+import {useSearchStore} from "../../../stores/search";
+import {IconSearch, IconShoppingCartFilled} from "@tabler/icons-react";
 
 export const Header = () => {
     const numberOfItems = useCartStore(state => state.numberOfItems)
@@ -54,7 +54,7 @@ export const Header = () => {
                 </form>
 
                 <Link to="/cart" className="header__cart">
-                    <div className="header__cart-icon">🛒</div>
+                    <div className="header__cart-icon"><IconShoppingCartFilled/></div>
                     {numberOfItems > 0 && <span className="header__cart-badge">{numberOfItems}</span>}
                 </Link>
             </div>
