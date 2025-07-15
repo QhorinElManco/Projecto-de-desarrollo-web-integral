@@ -1,7 +1,7 @@
 import {type FC, useEffect} from "react"
 import {useSearchParams} from "react-router-dom"
 import {useQuery} from "@tanstack/react-query"
-import {useSearchStore} from "../../stores/search/search.store.ts";
+import {useSearchStore} from "../../stores/search";
 import {SearchEmpty} from "../../components/products/product-search/SearchEmpty.tsx";
 
 import "./SearchResultPage.css"
