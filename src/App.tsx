@@ -4,11 +4,12 @@ import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
 import {ToastContainer} from "react-toastify";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Header} from "./components/UI/header/Header.tsx";
-import {HomePage} from "./pages/Home/HomePage.tsx";
-import {ProductDetailPage} from "./pages/ProductDetail/ProductDetailPage.tsx";
-import {CartPage} from "./pages/Cart/CartPage.tsx";
-import {CheckoutAddressPage} from "./pages/Checkout/Adress/CheckoutAddressPage.tsx";
-import {SearchResultPage} from "./pages/Search/SearchResultPage.tsx";
+import {HomePage} from "./pages/home/HomePage.tsx";
+import {ProductDetailPage} from "./pages/product-detail/ProductDetailPage.tsx";
+import {CartPage} from "./pages/cart/CartPage.tsx";
+import {CheckoutAddressPage} from "./pages/checkout/address/CheckoutAddressPage.tsx";
+import {SearchResultPage} from "./pages/search/SearchResultPage.tsx";
+import {CheckoutSummaryPage} from "./pages/checkout/summary/CheckoutSummaryPage.tsx";
 
 const queryClient = new QueryClient()
 
@@ -27,6 +28,7 @@ function App() {
                             <Route path="/product/:id" element={<ProductDetailPage/>}/>
                             <Route path="/cart" element={<CartPage/>}/>
                             <Route path="/checkout/address" element={<CheckoutAddressPage/>}/>
+                            <Route path="/checkout/summary" element={<CheckoutSummaryPage/>}/>
                             <Route path="/search" element={<SearchResultPage/>}/>
                         </Routes>
                     </main>
