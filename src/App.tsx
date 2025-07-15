@@ -8,7 +8,7 @@ import {HomePage} from "./pages/home/HomePage.tsx";
 import {ProductDetailPage} from "./pages/product-detail/ProductDetailPage.tsx";
 import {CartPage} from "./pages/cart/CartPage.tsx";
 import {CheckoutAddressPage} from "./pages/checkout/address/CheckoutAddressPage.tsx";
-import {SearchResultPage} from "./pages/Search/SearchResultPage.tsx";
+import {SearchResultPage} from "./pages/search/SearchResultPage.tsx";
 
 const queryClient = new QueryClient()
 
