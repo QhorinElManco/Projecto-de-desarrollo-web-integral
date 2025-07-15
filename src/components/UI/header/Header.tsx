@@ -41,7 +41,7 @@ export const Header = () => {
                     <div className="header__search">
                         <input
                             type="text"
-                            placeholder="Search"
+                            placeholder="Buscar..."
                             className="header__search-input"
                             value={localSearchTerm}
                             onChange={handleInputChange}
