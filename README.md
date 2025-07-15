@@ -1,69 +1,96 @@
-# React + TypeScript + Vite
+# Proyecto Frontend con React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto está construido utilizando tecnologías modernas de desarrollo web.
 
-Currently, two official plugins are available:
+## Tecnologías Principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19.1.0
+- TypeScript 5.8.3
+- Vite 7.0.0
 
-## Expanding the ESLint configuration
+## Bibliotecas y Dependencias Principales
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Gestión de Estado**
+  - Zustand 5.0.6
 
+- **Enrutamiento**
+  - React Router DOM 7.6.3
+
+- **Formularios y UI**
+  - @mantine/form 8.1.3
+  - @tabler/icons-react 3.34.0
+  - Swiper 11.2.10
+  - React Toastify 11.0.5
+
+- **Gestión de Datos**
+  - @tanstack/react-query 5.81.5
+  - @tanstack/react-query-devtools 5.81.5
+
+- **Gestión de Cookies**
+  - js-cookie 3.0.5
+
+## Herramientas de Desarrollo
+
+- ESLint 9.29.0 con plugins para React
+- TypeScript ESLint 8.34.1
+- PNPM como gestor de paquetes
+
+## Configuración Inicial
+
+1. Instalar dependencias:
+```bash
+pnpm install
+``` 
+
+2. Iniciar el servidor de desarrollo:
+```bash
+pnpm dev
+``` 
+
+## Scripts Disponibles
+
+- `pnpm dev` - Inicia el servidor de desarrollo
+- `pnpm build` - Construye la aplicación para producción
+- `pnpm preview` - Previsualiza la construcción de producción localmente
+
+## ESLint y TypeScript
+
+El proyecto incluye una configuración robusta de ESLint con soporte para TypeScript. Para habilitar reglas de lint conscientes del tipo, la configuración se puede expandir según las necesidades del proyecto.
+
+### Configuración Recomendada de ESLint
 ```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+export default tseslint.config(
+    [
+        globalIgnores(['dist']),
+        { 
+            files: ['**/*.{ts,tsx}'],
+            extends: [
+                ...tseslint.configs.recommendedTypeChecked,
+                ...tseslint.configs.strictTypeChecked, 
+                ...tseslint.configs.stylisticTypeChecked
+            ],
+            languageOptions: {
+                parserOptions: {
+                    project: [
+                        './tsconfig.node.json',
+                        './tsconfig.app.json'
+                    ],
+                    tsconfigRootDir: import.meta.dirname
+                },
+            },
+        },
+    ]
+)
+``` 
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Plugins Adicionales de React
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Para reglas de lint específicas de React, se pueden utilizar los siguientes plugins:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- eslint-plugin-react-x
+- eslint-plugin-react-dom
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Navegadores Soportados
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+El proyecto está configurado para soportar navegadores modernos que admitan las últimas características de ECMAScript.
 ```
