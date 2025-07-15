@@ -1,0 +1,13 @@
+@import "../../../../node_modules/.pnpm/swiper@11.2.10/node_modules/swiper/swiper.css";
+@import '../../../../node_modules/.pnpm/swiper@11.2.10/node_modules/swiper/modules/effect-coverflow.css';
+@import '../../../../node_modules/.pnpm/swiper@11.2.10/node_modules/swiper/modules/pagination.css';
+
+.carousel__root {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}
