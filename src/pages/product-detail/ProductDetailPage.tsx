@@ -27,8 +27,8 @@ export const ProductDetailPage: React.FC = () => {
         enabled: !!id,
     })
 
-    if (isLoading) return <div className="product-detail__loading">Loading...</div>
-    if (error || !data || !tempCartProduct) return <div className="product-detail__error">Product not found</div>
+    if (isLoading) return <div className="product-detail__loading">Cargando...</div>
+    if (error || !data || !tempCartProduct) return <div className="product-detail__error">Producto no encontrado</div>
 
     return (
         <div className="product-detail">
@@ -51,7 +51,7 @@ export const ProductDetailPage: React.FC = () => {
                     </div>
 
                     <div className="product-detail__quantity">
-                        <h3 className="product-detail__quantity-title">Quantity</h3>
+                        <h3 className="product-detail__quantity-title">Cantidad</h3>
                         <ItemCounter
                             maxValue={data.inStock}
                             currentValue={tempCartProduct.quantity}
@@ -69,7 +69,7 @@ export const ProductDetailPage: React.FC = () => {
                         </button>
                     )}
                     <div className="product-detail__description">
-                        <h3 className="product-detail__description-title">Description</h3>
+                        <h3 className="product-detail__description-title">Descripción</h3>
                         <p className="product-detail__description-text">{data.description}</p>
                     </div>
                 </div>

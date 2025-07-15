@@ -13,9 +13,9 @@ export const CartPage: React.FC = () => {
                 <div className="cart__container">
                     <h1 className="cart__title">My cart</h1>
                     <div className="cart__empty">
-                        <p>Your cart is empty</p>
+                        <p>Tu carro esta vacío</p>
                         <Link to="/" className="cart__continue-shopping">
-                            Continue shopping
+                            Continuar comprando
                         </Link>
                     </div>
                 </div>
@@ -26,7 +26,7 @@ export const CartPage: React.FC = () => {
     return (
         <div className="cart">
             <div className="cart__container">
-                <h1 className="cart__title">My cart</h1>
+                <h1 className="cart__title">Mi carrito</h1>
 
                 <div className="cart__content">
                     <div className="cart__items">
@@ -40,7 +40,7 @@ export const CartPage: React.FC = () => {
 
                                 <div className="cart__item-details">
                                     <h3 className="cart__item-name">{item.title}</h3>
-                                    <p className="cart__item-size">Size: {item.size}</p>
+                                    <p className="cart__item-size">Talla: {item.size}</p>
 
                                     <div className="cart__item-controls">
                                         <div className="cart__item-quantity">
@@ -52,7 +52,7 @@ export const CartPage: React.FC = () => {
                                         </div>
                                         <button className="cart__remove-btn"
                                                 onClick={() => deleteProductFromCart(item)}>
-                                            Remove
+                                            Quitar
                                         </button>
                                     </div>
                                 </div>
@@ -64,9 +64,9 @@ export const CartPage: React.FC = () => {
 
                     <div className="cart__summary">
                         <div className="cart__summary-card">
-                            <h2 className="cart__summary-title">Order</h2>
+                            <h2 className="cart__summary-title">Orden</h2>
                             <div className="cart__summary-row">
-                                <span>No. Products</span>
+                                <span>No. Productos</span>
                                 <span>{numberOfItems}</span>
                             </div>
 
@@ -76,7 +76,7 @@ export const CartPage: React.FC = () => {
                             </div>
 
                             <div className="cart__summary-row">
-                                <span>Taxation ({import.meta.env.VITE_TAX_RATE * 100} %)</span>
+                                <span>Impuesto ({import.meta.env.VITE_TAX_RATE * 100} %)</span>
                                 <span>${tax}</span>
                             </div>
 
