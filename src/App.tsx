@@ -5,7 +5,7 @@ import {ToastContainer} from "react-toastify";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Header} from "./components/UI/header/Header.tsx";
 import {HomePage} from "./pages/home/HomePage.tsx";
-import {ProductDetailPage} from "./pages/ProductDetail/ProductDetailPage.tsx";
+import {ProductDetailPage} from "./pages/product-detail/ProductDetailPage.tsx";
 import {CartPage} from "./pages/cart/CartPage.tsx";
 import {CheckoutAddressPage} from "./pages/checkout/address/CheckoutAddressPage.tsx";
 import {SearchResultPage} from "./pages/Search/SearchResultPage.tsx";
