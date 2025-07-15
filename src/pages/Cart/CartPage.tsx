@@ -2,7 +2,7 @@ import type React from "react"
 import {Link} from "react-router-dom"
 import "./CartPage.css"
 import {useCartStore} from "../../stores/cart";
-import {ItemCounter} from "../../components/ItemCounter/ItemCounter.tsx";
+import {ItemCounter} from "../../components/UI/item-counter/ItemCounter.tsx";
 
 export const CartPage: React.FC = () => {
     const {numberOfItems, updateProductQuantity, deleteProductFromCart, total, cart, subtotal, tax} = useCartStore()

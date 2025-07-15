@@ -782,13 +782,3 @@ export const mockProducts: IProduct[] = [
     //     "updatedAt": "2024-03-03T09:43:39.392Z"
     // }
 ]
-
-export const fetchProducts = async (): Promise<IProduct[]> => {
-    await new Promise((resolve) => setTimeout(resolve, 500))
-    return mockProducts
-}
-
-export const fetchProductById = async (id: IProduct["id"]): Promise<IProduct | undefined> => {
-    await new Promise((resolve) => setTimeout(resolve, 300))
-    return mockProducts.find((product) => product.id === id)
-}

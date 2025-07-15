@@ -3,10 +3,10 @@ import {useParams} from "react-router-dom"
 import {useQuery} from "@tanstack/react-query"
 import "./ProductDetailPage.css"
 import {useProductDetails} from "../../hooks/useProductDetails.ts";
-import {fetchProductById} from "../../data.ts";
-import {Carousel} from "../../components/Carousel/Carousel.tsx";
-import {SizeSelector} from "../../components/SizeSelector/SizeSelector.tsx";
-import {ItemCounter} from "../../components/ItemCounter/ItemCounter.tsx";
+import {Carousel} from "../../components/UI/carousel/Carousel.tsx";
+import {SizeSelector} from "../../components/products/size-selector/SizeSelector.tsx";
+import {ItemCounter} from "../../components/UI/item-counter/ItemCounter.tsx";
+import {fetchProductById} from "../../services/productService.ts";
 
 export const ProductDetailPage: React.FC = () => {
     const {id} = useParams<{ id: string }>()
