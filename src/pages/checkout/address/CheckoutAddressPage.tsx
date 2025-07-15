@@ -7,7 +7,7 @@ export const CheckoutAddressPage = () => {
     return (
         <div className="checkout">
             <div className="checkout__container">
-                <h1 className="checkout__title">Address</h1>
+                <h1 className="checkout__title">Dirección</h1>
 
                 <form onSubmit={form.onSubmit(handleSubmit, handleError)} className="checkout__form">
                     <div className="checkout__field">
@@ -105,7 +105,7 @@ export const CheckoutAddressPage = () => {
                     </div>
 
                     <button type="submit" className="checkout__submit-btn">
-                        Review order
+                        Verificar de pedido
                     </button>
                 </form>
             </div>
