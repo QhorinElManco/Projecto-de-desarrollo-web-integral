@@ -9,6 +9,7 @@ import {ProductDetailPage} from "./pages/product-detail/ProductDetailPage.tsx";
 import {CartPage} from "./pages/cart/CartPage.tsx";
 import {CheckoutAddressPage} from "./pages/checkout/address/CheckoutAddressPage.tsx";
 import {SearchResultPage} from "./pages/search/SearchResultPage.tsx";
+import {CheckoutSummaryPage} from "./pages/checkout/summary/CheckoutSummaryPage.tsx";
 
 const queryClient = new QueryClient()
 
@@ -27,6 +28,7 @@ function App() {
                             <Route path="/product/:id" element={<ProductDetailPage/>}/>
                             <Route path="/cart" element={<CartPage/>}/>
                             <Route path="/checkout/address" element={<CheckoutAddressPage/>}/>
+                            <Route path="/checkout/summary" element={<CheckoutSummaryPage/>}/>
                             <Route path="/search" element={<SearchResultPage/>}/>
                         </Routes>
                     </main>
