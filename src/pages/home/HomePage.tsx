@@ -14,13 +14,13 @@ export const HomePage: React.FC = () => {
         queryFn: fetchProducts,
     })
 
-    if (isLoading) return <div className="home__loading">Loading products...</div>
-    if (error) return <div className="home__error">Error loading products</div>
+    if (isLoading) return <div className="home__loading">Cargando productos...</div>
+    if (error) return <div className="home__error">Error de carga de productos</div>
 
     return (
         <div className="home">
             <div className="home__container">
-                <h1 className="home__title">All products</h1>
+                <h1 className="home__title">Todos los productos</h1>
                 <ProductList products={data || []}/>
             </div>
         </div>

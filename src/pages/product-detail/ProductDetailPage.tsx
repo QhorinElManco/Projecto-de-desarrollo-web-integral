@@ -42,7 +42,7 @@ export const ProductDetailPage: React.FC = () => {
                     <p className="product-detail__price">${data.price}</p>
 
                     <div className="product-detail__size">
-                        <h3 className="product-detail__size-title">Size</h3>
+                        <h3 className="product-detail__size-title">Talla</h3>
                         <SizeSelector
                             selectedSize={tempCartProduct.size}
                             sizes={data.sizes}
@@ -61,7 +61,7 @@ export const ProductDetailPage: React.FC = () => {
 
                     {data.inStock > 0 ? (
                         <button onClick={handleAddToCart} className="product-detail__add-btn">
-                            {tempCartProduct.size ? "Add to cart" : "Select a size"}
+                            {tempCartProduct.size ? "Añadir a la cesta" : "Seleccione una talla"}
                         </button>
                     ) : (
                         <button className={"product-detail__add-btn product-detail__add-btn--disabled"}>
