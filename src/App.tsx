@@ -6,7 +6,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {Header} from "./components/UI/header/Header.tsx";
 import {HomePage} from "./pages/Home/HomePage.tsx";
 import {ProductDetailPage} from "./pages/ProductDetail/ProductDetailPage.tsx";
-import {CartPage} from "./pages/Cart/CartPage.tsx";
+import {CartPage} from "./pages/cart/CartPage.tsx";
 import {CheckoutAddressPage} from "./pages/Checkout/Adress/CheckoutAddressPage.tsx";
 import {SearchResultPage} from "./pages/Search/SearchResultPage.tsx";
 
